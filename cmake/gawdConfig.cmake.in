@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+# Only find dependencies that consumers need
+
+include("${CMAKE_CURRENT_LIST_DIR}/gawdTargets.cmake")
