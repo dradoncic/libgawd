@@ -1,32 +1,32 @@
 #ifndef GAWD_CONFIG_H
 #define GAWD_CONFIG_H
 
-#define LIBGAWD_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
-#define LIBGAWD_VERSION_MINOR @PROJECT_VERSION_MINOR@
-#define LIBGAWD_VERSION_PATCH @PROJECT_VERSION_PATCH@
+#define LIBGAWD_VERSION_MAJOR @PROJECT_VERSION_MAJOR @
+#define LIBGAWD_VERSION_MINOR @PROJECT_VERSION_MINOR @
+#define LIBGAWD_VERSION_PATCH @PROJECT_VERSION_PATCH @
 
 #define LIBGAWD_VERSION "@PROJECT_VERSION@"
 
-#if defined(_WIN32) || defined (_WIN64)
-#define GAWD_WINDOWS 1
+#if defined(_WIN32) || defined(_WIN64)
+#  define GAWD_WINDOWS 1
 #else
-#define GAWD_POSIX 1
+#  define GAWD_POSIX 1
 #endif
 
-#define GAWD_DEBUG @GAWD_DEBUG@ // 1 = debug, 0 = release
+#define GAWD_DEBUG @GAWD_DEBUG @  // 1 = debug, 0 = release
 
 #if defined(__GNUC__) || defined(__clang__)
-#define GAWD_INLINE static inline __attribute__((always_inline))
-#define GAWD_LIKELY(x)   __builtin_expect(!!(x),1)
-#define GAWD_UNLIKELY(x) __builtin_expect(!!(x),0)
+#  define GAWD_INLINE static inline __attribute__((always_inline))
+#  define GAWD_LIKELY(x) __builtin_expect(!!(x), 1)
+#  define GAWD_UNLIKELY(x) __builtin_expect(!!(x), 0)
 #else
-#define GAWD_INLINE static inline
-#define GAWD_LIKELY(x)   (x)
-#define GAWD_UNLIKELY(x) (x)
+#  define GAWD_INLINE static inline
+#  define GAWD_LIKELY(x) (x)
+#  define GAWD_UNLIKELY(x) (x)
 #endif
 
-#define GAWD_OK      0
-#define GAWD_ENOMEM  1  // allocation failure
-#define GAWD_EINVAL  2  // invalid argument
+#define GAWD_OK 0
+#define GAWD_ENOMEM 1  // allocation failure
+#define GAWD_EINVAL 2  // invalid argument
 
-#endif GAWD_CONFIG_H
+#endif  // GAWD_CONFIG_H

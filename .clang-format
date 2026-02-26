@@ -1,0 +1,94 @@
+# Start from Google but override aggressively
+BasedOnStyle: Google
+Language: Cpp
+
+# =========================
+# Indentation & spacing
+# =========================
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+ContinuationIndentWidth: 4
+
+ColumnLimit: 100
+
+# =========================
+# Braces (Allman style)
+# =========================
+BreakBeforeBraces: Allman
+
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+
+# =========================
+# Short statements
+# =========================
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Inline
+
+# =========================
+# If / else / loops
+# =========================
+AlwaysBreakAfterReturnType: None
+BreakBeforeBinaryOperators: None
+BreakConstructorInitializers: BeforeComma
+ConstructorInitializerIndentWidth: 4
+
+# =========================
+# Alignment
+# =========================
+AlignAfterOpenBracket: Align
+AlignOperands: Align
+AlignTrailingComments: true
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+
+# =========================
+# Pointer & reference style
+# =========================
+PointerAlignment: Left
+ReferenceAlignment: Left
+DerivePointerAlignment: false
+
+# =========================
+# Includes
+# =========================
+SortIncludes: true
+IncludeBlocks: Regroup
+
+# =========================
+# Namespace formatting
+# =========================
+NamespaceIndentation: None
+FixNamespaceComments: true
+
+# =========================
+# Misc C++ niceties
+# =========================
+SpaceBeforeParens: ControlStatements
+SpacesInAngles: false
+SpaceAfterCStyleCast: true
+SpacesInContainerLiterals: true
+SpacesInParentheses: false
+
+# =========================
+# Comments
+# =========================
+ReflowComments: true
+CommentPragmas: '^ IWYU pragma:'
+
+# =========================
+# Preprocessor
+# =========================
+IndentPPDirectives: AfterHash
